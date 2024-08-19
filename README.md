@@ -4,8 +4,10 @@
 
 ## Live Link -> https://recyclo-beta.web.app
 
-Admin Credential
+### Admin Credential
 
-User Name: Admin_01
-Email: admin01@gmail.com
-Password: asdfJKL:1@
+> User Name: Admin_01
+
+> Email: admin01@gmail.com
+
+> Password: asdfJKL:1@
