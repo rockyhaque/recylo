@@ -75,7 +75,7 @@ const Footer = () => {
               <FaXTwitter />
             </div>
             <div>
-              <p className="text-neutral-400">Recyclo eCommerce © 2024. All Rights Reserved</p>
+              <p className="text-neutral-400">Recyclo eCommerce © 2025. All Rights Reserved</p>
             </div>
             <div className="flex gap-5">
               <div className="border-2 border-customGray p-2 rounded-md"><img src="https://i.ibb.co/VHK0B10/ApplePay.png" alt="" /></div>
