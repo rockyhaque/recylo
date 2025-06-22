@@ -15,7 +15,7 @@ const Featured = () => {
   }, []);
 
   function calculateCountdown() {
-    const eventDate = new Date("June 08, 2024 00:00:00").getTime();
+    const eventDate = new Date("July 30, 2025 00:00:00").getTime();
     const currentDate = new Date().getTime();
     const difference = eventDate - currentDate;
 
