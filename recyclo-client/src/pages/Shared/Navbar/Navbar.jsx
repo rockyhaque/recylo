@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex w-[100vw] justify-around items-center navbar max-w-screen-xl text-[#101211] bg-neutral-50">
+      <div className="flex w-[100vw] justify-around items-center navbar text-[#101211] bg-neutral-50">
         <div className="">
           <Link to='/'>
             <div className="dropdown ">

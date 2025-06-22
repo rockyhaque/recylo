@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const HeroBanner = () => {
   return (
-    <div className="mt-48">
+    <div className="">
       <div
         className="hero h-[500px] relative rounded-2xl"
         style={{

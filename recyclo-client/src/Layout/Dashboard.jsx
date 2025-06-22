@@ -13,28 +13,19 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
-import TopNavbar from "./../pages/Shared/TopNavbar/TopNavbar";
-import Navbar from "../pages/Shared/Navbar/Navbar";
-import BottomNavbar from "./../pages/Shared/BottomNavbar/BottomNavbar";
 import Footer from "../pages/Shared/Footer/Footer";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Dashboard = () => {
   const [cart] = useCart();
-  const { user, logOut } = useContext(AuthContext);
+  const { user} = useContext(AuthContext);
   const [isAdmin] = useAdmin();
 
   // console.log(isAdmin);
   return (
     <div className="relative font-poppins bg-customPurple">
-      <div className="fixed top-0 z-10">
-        <TopNavbar></TopNavbar>
-        <Navbar></Navbar>
-        <BottomNavbar></BottomNavbar>
-      </div>
-
-      <div className="flex mt-44">
+      <div className="flex mt-0">
         {/* Side bar */}
         <div className="w-64 min-h-screen bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100">
           <ul className="menu p-4 fixed">

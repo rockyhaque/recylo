@@ -5,21 +5,43 @@ import Navbar from "../pages/Shared/Navbar/Navbar";
 import TopNavbar from "../pages/Shared/TopNavbar/TopNavbar";
 import BottomNavbar from "./../pages/Shared/BottomNavbar/BottomNavbar";
 
+// const Main = () => {
+//   return (
+//     <div className="relative font-poppins">
+//       <div className="fixed top-0 z-10">
+//         <TopNavbar></TopNavbar>
+//         <Navbar></Navbar>
+//         <BottomNavbar></BottomNavbar>
+//       </div>
+//       <div className="max-w-screen-xl mx-auto">
+//         <Outlet></Outlet>
+//       </div>
+//       <Footer></Footer>
+//     </div>
+//   );
+// };
+
 const Main = () => {
-  // const location = useLocation();
-  // const noHeaderFooter =
-  //   location.pathname.includes("login") || location.pathname.includes("signup");
   return (
     <div className="relative font-poppins">
-      <div className="fixed top-0 z-10">
-        <TopNavbar></TopNavbar>
-        <Navbar></Navbar>
-        <BottomNavbar></BottomNavbar>
+      {/* Centered fixed nav */}
+      <div className="fixed top-0 left-0 w-full z-10 bg-white shadow">
+        <div className="">
+          <TopNavbar />
+          <Navbar />
+          <BottomNavbar />
+        </div>
       </div>
-      <Outlet></Outlet>
-      <Footer></Footer>
+
+      {/* Main content offset to account for fixed header */}
+      <div className="pt-[250px] max-w-screen-xl mx-auto px-4">
+        <Outlet />
+      </div>
+
+      <Footer />
     </div>
   );
 };
+
 
 export default Main;
