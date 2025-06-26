@@ -31,7 +31,7 @@ const Order = () => {
   //   const offered = service.filter((item) => item.category === "offered");
 
   return (
-    <div>
+    <div className="mb-10">
       <Helmet>
         <title>Recyclo | Order Item</title>
       </Helmet>

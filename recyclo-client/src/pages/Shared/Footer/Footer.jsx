@@ -6,13 +6,13 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer px-10 py-20  bg-[#101211] ">
+    <div className="bg-[#101211]">
+      <footer className="footer px-2 py-20 max-w-screen-xl mx-auto">
         <nav className="gap-5">
           <h6 className="font-bold text-slate-50 text-xl text-neutral-300">
             About Recyclo{" "}
           </h6>
-          <a className="link link-hover w-56 text-neutral-400">
+          <a className="w-56 text-neutral-400">
             Enjoy hassle-free buying and selling of recyclable materials. Join
             our community today and make a positive impact on the environment.
           </a>

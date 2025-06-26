@@ -55,7 +55,7 @@ const SignUp = () => {
       <Helmet>
         <title>Recyclo | Sign Up</title>
       </Helmet>
-      <div className="hero h-screen bg-base-200 mt-44 ">
+      <div className="hero h-screen">
         <div className="hero-content w-full">
           <div className=" w-full max-w-lg shadow-2xl bg-base-100 px-8 py-6 rounded-lg">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">

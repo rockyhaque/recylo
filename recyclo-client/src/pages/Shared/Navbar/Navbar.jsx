@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="flex w-[100vw] justify-around items-center navbar text-[#101211] bg-neutral-50">
         <div className="">
           <Link to='/'>
-            <div className="dropdown ">
+            {/* <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,9 +70,9 @@ const Navbar = () => {
               >
                 {navOptions}
               </ul>
-            </div>
-            <div>
-              <div className="btn btn-ghost normal-case text-xl">
+            </div> */}
+            <div className="flex items-center h-full">
+              <div className="btn btn-ghost flex items-center ">
                 <img
                   className="w-24"
                   src="https://i.ibb.co/tJJ4KM1/Logo-light.png"
@@ -97,7 +97,7 @@ const Navbar = () => {
         <div className="navbar-end">
           <div>
             {user ? (
-              <div className="flex items-center justify-center gap-4">
+              <div className="flex items-center justify-center gap-4 pr-3">
                 <div className="avatar online">
                   <div className="w-12 rounded-full">
                     <img src={user?.photoURL} />
@@ -122,8 +122,8 @@ const Navbar = () => {
             ) : (
               <>
                 <div>
-                  <div>
-                    <div>
+                  <div className="mr-5">
+                    <div >
                       <GreetingMessage></GreetingMessage>
                     </div>
                     <Link className="font-semibold" to="/login">

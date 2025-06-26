@@ -39,7 +39,7 @@ const Featured = () => {
       <SectionTitle heading="Hot Deals"></SectionTitle>
       <div className="md:flex justify-center items-center py-20 pt-8 ">
         <div className="w-full  text-center">
-          <p className="font-bold text-xl mb-4">June 08, 2024</p>
+          <p className="font-bold text-xl mb-4">July 30, 2025</p>
           <p className="mb-4 text-xl text-neutral-700">
             Do not miss out on this exclusive deal! Get up to 50% off on
             selected items. <br /> Hurry, while stocks last!

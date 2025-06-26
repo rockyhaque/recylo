@@ -79,9 +79,9 @@ const ManageProducts = () => {
                   <td>
                     <button
                       onClick={() => handleDeleteItem(item)}
-                      className="btn btn-ghost btn-mg hover:bg-customRed hover:text-customWhite"
+                      className="border border-neutral-400 px-2.5 py-2.5 rounded-lg hover:bg-customRed hover:text-customWhite"
                     >
-                      <TiDeleteOutline className="text-2xl" />
+                      <TiDeleteOutline className="text-2xl " />
 
                     </button>
                   </td>

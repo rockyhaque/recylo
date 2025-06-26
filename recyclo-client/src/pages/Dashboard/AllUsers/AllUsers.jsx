@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import { FaTrashAlt, FaUsers } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
 import SectionTitle from './../../../components/SectionTitle/SectionTitle';
 import { TiDeleteOutline } from "react-icons/ti";
@@ -93,7 +93,7 @@ const AllUsers = () => {
                 <td>
                   <button
                     onClick={() => handleDeleteUser(user)}
-                    className="btn btn-ghost btn-lg hover:bg-customRed hover:text-customWhite"
+                    className="border border-neutral-400 px-2.5 py-2.5 rounded-lg hover:bg-customRed hover:text-customWhite"
                   >
                     <TiDeleteOutline className="text-2xl" />
                   </button>

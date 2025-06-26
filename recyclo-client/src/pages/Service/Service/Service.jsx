@@ -22,7 +22,7 @@ const Service = () => {
     const electronic = service.filter(item => item.category === 'electronic');
     const offered = service.filter(item => item.category === 'offered');
     return (
-        <div>
+        <div className='mb-10'>
             <Helmet>
                 <title>Recyclo | Service</title>
             </Helmet>

@@ -9,43 +9,57 @@ const BottomNavbar = () => {
   const navOptions = (
     <div className="flex">
       <li>
-        <Link className="hover:bg-customGreen hover:text-customBlack" to="/">Home</Link>
+        <Link className="hover:bg-customGreen hover:text-customBlack" to="/">
+          Home
+        </Link>
       </li>
       <li>
-        <Link className="hover:bg-customGreen hover:text-customBlack" to="/service">Our Service</Link>
+        <Link
+          className="hover:bg-customGreen hover:text-customBlack"
+          to="/service"
+        >
+          Our Service
+        </Link>
       </li>
       <li>
-        <Link className="hover:bg-customGreen hover:text-customBlack" to="/order/paper">Buy Wastes</Link>
+        <Link
+          className="hover:bg-customGreen hover:text-customBlack"
+          to="/order/paper"
+        >
+          Buy Wastes
+        </Link>
       </li>
       <li>
-        <Link className="hover:bg-customGreen hover:text-customBlack" to="/faq">FAQ’s</Link>
+        <Link className="hover:bg-customGreen hover:text-customBlack" to="/faq">
+          FAQ’s
+        </Link>
       </li>
-      <div>
-        {user && isAdmin && (
-          <li>
-            <Link className="hover:bg-customGreen hover:text-customBlack" to="/dashboard/adminHome">Dashboard</Link>
-          </li>
-        )}
-        {user && !isAdmin && (
-          <li>
-            <Link className="hover:bg-customGreen hover:text-customBlack" to="/dashboard/userHome">Dashboard</Link>
-          </li>
-        )}
-      </div>
+
       <li>
-        <Link className="hover:bg-customGreen hover:text-customBlack" to="/about">About Us</Link>
+        <Link
+          className="hover:bg-customGreen hover:text-customBlack"
+          to="/about"
+        >
+          About Us
+        </Link>
       </li>
       <li>
-        <Link className="hover:bg-customGreen hover:text-customBlack" to="/contact">Contact Us</Link>
+        <Link
+          className="hover:bg-customGreen hover:text-customBlack"
+          to="/contact"
+        >
+          Contact Us
+        </Link>
       </li>
     </div>
   );
 
   return (
-    <div className="bg-[#101211] ">
-      <div className="navbar max-w-screen-xl text-neutral-300">
-        <div className="ml-20">
-          <div className="dropdown ">
+    <div className="bg-[#101211]">
+      <div className="navbar max-w-screen-xl text-neutral-300 mx-auto">
+        {/* Left side: Hamburger for small screens */}
+        <div className="ml-0">
+          <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +84,34 @@ const BottomNavbar = () => {
             </ul>
           </div>
         </div>
+
+        {/* Center nav */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
+        </div>
+
+        {/* Right side: Dashboard */}
+        <div className="ml-auto">
+          {user && isAdmin && (
+            <li className="list-none">
+              <Link
+                className="px-3 py-2 rounded-lg hover:bg-customGreen hover:text-customBlack"
+                to="/dashboard/adminHome"
+              >
+                Dashboard
+              </Link>
+            </li>
+          )}
+          {user && !isAdmin && (
+            <li className="list-none">
+              <Link
+                className="hover:bg-customGreen hover:text-customBlack"
+                to="/dashboard/userHome"
+              >
+                Dashboard
+              </Link>
+            </li>
+          )}
         </div>
       </div>
     </div>

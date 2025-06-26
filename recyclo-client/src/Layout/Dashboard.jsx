@@ -13,7 +13,6 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
-import Footer from "../pages/Shared/Footer/Footer";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 
@@ -141,7 +140,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <Footer></Footer>
     </div>
   );
 };

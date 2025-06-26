@@ -3,7 +3,7 @@
 const Faq = () => {
   return (
     <div>
-      <div className="flex justify-center items-center gap-6 mt-44">
+      <div className="flex justify-center items-center gap-6">
         <div className="w-full md:w-1/2 lg:w-1/2 mb-6">
           <h1 className="text-4xl font-semibold mt-10 mb-7">Welcome, Let’s Talk About Our Recyclo.</h1>
           <div className="collapse collapse-plus bg-base-200 mb-3">

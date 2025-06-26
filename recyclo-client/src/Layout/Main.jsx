@@ -5,22 +5,6 @@ import Navbar from "../pages/Shared/Navbar/Navbar";
 import TopNavbar from "../pages/Shared/TopNavbar/TopNavbar";
 import BottomNavbar from "./../pages/Shared/BottomNavbar/BottomNavbar";
 
-// const Main = () => {
-//   return (
-//     <div className="relative font-poppins">
-//       <div className="fixed top-0 z-10">
-//         <TopNavbar></TopNavbar>
-//         <Navbar></Navbar>
-//         <BottomNavbar></BottomNavbar>
-//       </div>
-//       <div className="max-w-screen-xl mx-auto">
-//         <Outlet></Outlet>
-//       </div>
-//       <Footer></Footer>
-//     </div>
-//   );
-// };
-
 const Main = () => {
   return (
     <div className="relative font-poppins">
