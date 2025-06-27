@@ -3,7 +3,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const TopCategory = () => {
   return (
-    <div>
+    <div className="max-w-screen-xl mx-auto">
       <SectionTitle heading="Top Category"></SectionTitle>
       <div className="grid grid-cols-6 gap-8">
         <Link to="/order/paper">

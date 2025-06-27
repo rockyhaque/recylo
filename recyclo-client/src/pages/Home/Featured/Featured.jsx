@@ -35,7 +35,7 @@ const Featured = () => {
   }
 
   return (
-    <div className="featured-item bg-fixed pt-8">
+    <div className="featured-item bg-fixed pt-8 max-w-screen-xl mx-auto">
       <SectionTitle heading="Hot Deals"></SectionTitle>
       <div className="md:flex justify-center items-center py-20 pt-8 ">
         <div className="w-full  text-center">

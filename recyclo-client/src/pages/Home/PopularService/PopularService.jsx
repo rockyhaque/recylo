@@ -8,7 +8,7 @@ const PopularService = () => {
   const popular = service.filter((item) => item.category === "popular");
 
   return (
-    <section className="mb-12">
+    <section className="mb-12 max-w-screen-xl mx-auto">
       <SectionTitle heading="Featured Products"></SectionTitle>
       <div className="grid md:grid-cols-2 gap-10">
         {popular.map((item) => (

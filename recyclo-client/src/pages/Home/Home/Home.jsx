@@ -5,23 +5,25 @@ import Testimonials from "../Testimonials/Testimonials";
 import HeroBanner from "../HeroBanner/HeroBanner";
 import HeroBannerService from "../HeroBannerService/HeroBannerService";
 import TopCategory from "../TopCategory/TopCategory";
+import Newsletter from "../Newsletter/Newsletter";
+import InstagramPostSection from "../InstagramPostSection/InstagramPostSection";
 
 const Home = () => {
-    return (
-        <div>
-            <Helmet>
-                <title>Recyclo | Home</title>
-            </Helmet>
-            <HeroBanner></HeroBanner>
-            <HeroBannerService></HeroBannerService>
-            <TopCategory></TopCategory>
-            {/* <Banner></Banner> */}
-            {/* <Category></Category> */}
-            <PopularService></PopularService>
-            <Featured></Featured>
-            <Testimonials></Testimonials>
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>Recyclo | Home</title>
+      </Helmet>
+      <HeroBanner />
+      <HeroBannerService />
+      <TopCategory />
+      <PopularService />
+      <Featured />
+      <Testimonials />
+      <InstagramPostSection />
+      <Newsletter />
+    </div>
+  );
 };
 
 export default Home;

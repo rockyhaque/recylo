@@ -5,7 +5,7 @@ import { CiMoneyCheck1 } from "react-icons/ci";
 
 const HeroBannerService = () => {
   return (
-    <div className="hidden md:hidden lg:block">
+    <div className="hidden md:hidden lg:block max-w-screen-xl mx-auto">
       <div className="flex justify-center bg-customWhite relative -mt-10 mx-16 py-7 rounded-md shadow-2xl space-x-12 text-xs ">
         <div className="flex justify-center items-center gap-3">
           <div>

@@ -7,7 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div className="bg-[#101211]">
-      <footer className="footer px-2 py-20 max-w-screen-xl mx-auto">
+      <footer className="footer py-20 max-w-screen-xl mx-auto">
         <nav className="gap-5">
           <h6 className="font-bold text-slate-50 text-xl text-neutral-300">
             About Recyclo{" "}
@@ -64,7 +64,7 @@ const Footer = () => {
         </nav>
       </footer>
 
-      <footer className="bg-[#101211] px-10 cursor-pointer">
+      <footer className="bg-[#101211]  cursor-pointer max-w-screen-xl mx-auto">
         <nav>
           <hr />
           <div className="flex justify-between items-center my-6 pb-6">

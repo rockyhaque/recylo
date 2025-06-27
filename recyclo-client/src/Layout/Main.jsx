@@ -18,7 +18,7 @@ const Main = () => {
       </div>
 
       {/* Main content offset to account for fixed header */}
-      <div className="pt-[250px] max-w-screen-xl mx-auto px-4">
+      <div className="pt-[250px]">
         <Outlet />
       </div>
 

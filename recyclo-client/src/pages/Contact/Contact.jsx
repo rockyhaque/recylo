@@ -4,7 +4,7 @@ import { LuPhoneCall } from "react-icons/lu";
 
 const Contact = () => {
   return (
-    <div className="">
+    <div className="max-w-screen-xl mx-auto">
       <div className="flex gap-8 bg-neutral-50 py-8">
         <div className="w-1/3 shadow-xl bg-customWhite rounded-lg">
           <div className="card bg-base-100 flex justify-center items-center py-6">

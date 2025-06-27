@@ -1,61 +1,283 @@
 #app {
-    height: 100%;
+  height: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+/* Autoplay Progress Indicator */
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #f97316; /* Orange color to match theme */
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: #f97316; /* Orange color */
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.autoplay-progress span {
+  position: relative;
+  z-index: 11;
+  font-size: 12px;
+  color: #f97316;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}
+
+/* Animation for loading state */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
-  html,
-  body {
-    position: relative;
-    height: 100%;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Line clamp utility for consistent text truncation */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonials-container {
+    padding: 0 16px;
   }
-  
-  
-  /* .swiper {
-    width: 100%;
-    height: 100%;
-  } */
-  
-  /* .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-  
-  /* .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
-  
+
   .autoplay-progress {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
-    z-index: 10;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: var(--swiper-theme-color);
+    right: 12px;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
   }
-  
-  .autoplay-progress svg {
-    --progress: 0;
-    position: absolute;
-    left: 0;
-    top: 0px;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    stroke-width: 4px;
-    stroke: var(--swiper-theme-color);
-    fill: none;
-    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-    stroke-dasharray: 125.6;
-    transform: rotate(-90deg);
+
+  .autoplay-progress span {
+    font-size: 10px;
   }
-  
+}
+
+@media (max-width: 640px) {
+  .testimonials-container {
+    padding: 0 12px;
+  }
+
+  .autoplay-progress {
+    right: 8px;
+    bottom: 8px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Hover effects */
+.testimonial-card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Touch feedback for mobile */
+@media (hover: none) {
+  .testimonial-card:hover {
+    transform: none;
+  }
+
+  .testimonial-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease-in-out;
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Ensure smooth transitions */
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+/* Additional utility classes */
+.testimonial-slide {
+  min-height: 0;
+}
+
+/* Progress circle animation */
+.autoplay-progress svg circle {
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+/* Hover effect for progress indicator */
+.autoplay-progress:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Ensure proper stacking context */
+.relative {
+  position: relative;
+}
+
+/* Grid responsive utilities */
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Flex utilities */
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+/* Text utilities */
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Spacing utilities */
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+/* Border radius utilities */
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+/* Shadow utilities */
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Color utilities */
+.text-gray-300 {
+  color: rgb(209 213 219);
+}
+
+.text-gray-500 {
+  color: rgb(107 114 128);
+}
+
+.text-gray-600 {
+  color: rgb(75 85 99);
+}
+
+.text-gray-900 {
+  color: rgb(17 24 39);
+}
+
+.bg-gray-50 {
+  background-color: rgb(249 250 251);
+}
+
+.bg-gray-100 {
+  background-color: rgb(243 244 246);
+}
+
+.bg-gray-300 {
+  background-color: rgb(209 213 219);
+}
+
+.bg-gray-900 {
+  background-color: rgb(17 24 39);
+}
+
+.bg-white {
+  background-color: rgb(255 255 255);
+}
+
+.border-gray-100 {
+  border-color: rgb(243 244 246);
+}
+
+.border-gray-200 {
+  border-color: rgb(229 231 235);
+}

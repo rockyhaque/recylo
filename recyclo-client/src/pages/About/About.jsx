@@ -3,11 +3,10 @@ import { CiStar } from "react-icons/ci";
 import { IoBagCheckOutline, IoLeafOutline } from "react-icons/io5";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { IoCubeOutline } from "react-icons/io5";
-import Testimonials from './../Home/Testimonials/Testimonials';
 
 const About = () => {
   return (
-    <section className="mt-56">
+    <section className="max-w-screen-xl mx-auto">
       {/* Welcome */}
       <div className="flex justify-center items-center gap-8">
         <div className="w-1/2">
@@ -54,7 +53,7 @@ const About = () => {
           <div className="grid grid-cols-2 my-4 gap-3">
             <div className="flex items-center gap-3">
               <div className="flex bg-customCreamyGreen w-11 p-3 rounded-full">
-              <IoLeafOutline />
+                <IoLeafOutline />
               </div>
               <div>
                 <h4 className="font-semibold">Wide Range of Materials</h4>
@@ -119,9 +118,13 @@ const About = () => {
             We Delivered, You <br /> Enjoy Your Order.
           </h2>
           <p className="text-customGray mt-5">
-          Join us at Recyclo and be a part of the solution. Together, let&apos;s reimagine waste and build a more sustainable future for generations to come.
+            Join us at Recyclo and be a part of the solution. Together,
+            let&apos;s reimagine waste and build a more sustainable future for
+            generations to come.
           </p>
-          <button className="btn bg-customBlack hover:bg-customGreen rounded-full text-customWhite px-10 mt-12">Shop Now</button>
+          <button className="btn bg-customBlack hover:bg-customGreen rounded-full text-customWhite px-10 mt-12">
+            Shop Now
+          </button>
         </div>
         <div className="w-1/2">
           <img
@@ -131,9 +134,6 @@ const About = () => {
           />
         </div>
       </div>
-
-      {/* Testimonial */}
-      <Testimonials></Testimonials>
     </section>
   );
 };

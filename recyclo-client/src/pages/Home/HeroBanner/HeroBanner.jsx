@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const HeroBanner = () => {
   return (
-    <div className="">
+    <div className="max-w-screen-xl mx-auto">
       <div
         className="hero h-[500px] relative rounded-2xl"
         style={{

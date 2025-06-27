@@ -10,6 +10,7 @@ export default {
     },
     colors: {
       customGreen: '#00CC71', 
+      customLightGreen: '#edf2ee', 
       customBlack: '#101211', 
       customGray: '#4D4D4D',
       customLightGray: '#F2F2F2',
