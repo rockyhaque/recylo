@@ -105,7 +105,7 @@ const BottomNavbar = () => {
           {user && !isAdmin && (
             <li className="list-none">
               <Link
-                className="hover:bg-customGreen hover:text-customBlack"
+                className="px-3 py-2 rounded-lg hover:bg-customGreen hover:text-customBlack"
                 to="/dashboard/userHome"
               >
                 Dashboard

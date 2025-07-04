@@ -149,11 +149,11 @@ const Testimonials = () => {
             <div className="flex gap-2">
               <button
                 onClick={goPrev}
-                className="w-10 h-10 rounded-full bg-white hover:bg-gray-500 border border-gray-200 flex items-center justify-center  transition-all duration-200 shadow-xl hover:shadow-2xl"
+                className="w-10 h-10 rounded-full bg-white hover:bg-customBlack hover:text-customWhite flex items-center justify-center  transition-all duration-200 shadow-sm hover:shadow-md"
                 aria-label="Previous testimonials"
               >
                 <svg
-                  className="w-5 h-5 text-gray-600"
+                  className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -168,7 +168,7 @@ const Testimonials = () => {
               </button>
               <button
                 onClick={goNext}
-                className="w-10 h-10 rounded-full bg-white hover:bg-gray-800 text-white flex items-center justify-center  transition-all duration-200 shadow-sm hover:shadow-md"
+                className="w-10 h-10 rounded-full bg-white hover:bg-customBlack hover:text-customWhite flex items-center justify-center  transition-all duration-200 shadow-sm hover:shadow-md"
                 aria-label="Next testimonials"
               >
                 <svg
