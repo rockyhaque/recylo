@@ -100,7 +100,7 @@ const Navbar = () => {
               <div className="flex items-center justify-center gap-4 pr-3">
                 <div className="avatar online">
                   <div className="w-12 rounded-full">
-                    <img src={user?.photoURL} />
+                    <img src={user?.photoURL} referrerPolicy="no-referrer"/>
                   </div>
                 </div>
                 <div className="">

@@ -23,7 +23,7 @@ const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 const AdminHome = () => {
   // const { user } = useAuth();
-  const { user, logOut } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
 
   const { data: stats } = useQuery({
@@ -126,8 +126,8 @@ const AdminHome = () => {
       {/* STATs card */}
       <div>
         <h2 className="mt-6 text-xl font-semibold">Dashboard</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
-          <div className="flex justify-center items-center gap-8 bg-customWhite rounded-lg py-3 shadow-lg">
+        <div className="flex flex-wrap gap-3 mt-4">
+          <div className="flex justify-center items-center gap-8 px-5 bg-customWhite rounded-lg py-3 shadow-lg ">
             <div>
               <h5 className="text-customGray">Revenue</h5>
               <h2 className="text-xl font-semibold">৳ {stats?.revenue}</h2>
@@ -140,7 +140,7 @@ const AdminHome = () => {
               />
             </div>
           </div>
-          <div className="flex justify-center items-center gap-8 bg-customWhite rounded-lg shadow-lg">
+          <div className="flex justify-center items-center gap-8 px-5 bg-customWhite rounded-lg shadow-lg">
             <div>
               <h5 className="text-customGray">Cutomer</h5>
               <h2 className="text-xl font-semibold">{stats?.users}</h2>
@@ -153,7 +153,7 @@ const AdminHome = () => {
               />
             </div>
           </div>
-          <div className="flex justify-center items-center gap-8 bg-customWhite rounded-lg shadow-lg">
+          <div className="flex justify-center items-center gap-8 px-5 bg-customWhite rounded-lg shadow-lg">
             <div>
               <h5 className="text-customGray">Order</h5>
               <h2 className="text-xl font-semibold">{stats?.orders}</h2>
@@ -166,7 +166,7 @@ const AdminHome = () => {
               />
             </div>
           </div>
-          <div className="flex justify-center items-center gap-8 bg-customWhite rounded-lg shadow-lg">
+          <div className="flex justify-center items-center gap-8 px-5 bg-customWhite rounded-lg shadow-lg">
             <div>
               <h5 className="text-customGray">Total Stock</h5>
               <h2 className="text-xl font-semibold">{stats?.productItems}</h2>

@@ -18,7 +18,7 @@ import { AuthContext } from "../providers/AuthProvider";
 
 const Dashboard = () => {
   const [cart] = useCart();
-  const { user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [isAdmin] = useAdmin();
 
   // console.log(isAdmin);
@@ -30,12 +30,12 @@ const Dashboard = () => {
           <ul className="menu p-4 fixed">
             {isAdmin ? (
               <>
-                <div className="mb-4">
+                <div className="mb-4 mt-5">
                   {user && (
                     <div className="flex items-center justify-center gap-4 bg-customWhite rounded-md py-3">
                       <div className="avatar">
                         <div className="w-12 rounded-full">
-                          <img src={user?.photoURL} />
+                          <img src={user?.photoURL}/>
                         </div>
                       </div>
                       <div className="">
@@ -89,6 +89,25 @@ const Dashboard = () => {
               </>
             ) : (
               <>
+                <div className="mb-4 mt-5">
+                  {user && (
+                    <div className="flex items-center justify-center gap-4 bg-customWhite rounded-md py-3">
+                      <div className="avatar">
+                        <div className="w-12 rounded-full">
+                          <img src={user?.photoURL} />
+                        </div>
+                      </div>
+                      <div className="">
+                        <div className=" text-[#101211] font-bold">
+                          {user?.displayName}
+                        </div>
+                        <div>
+                          <h3>User</h3>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
                 <li>
                   <NavLink to="/dashboard/userHome">
                     <FaHome></FaHome>
@@ -101,7 +120,6 @@ const Dashboard = () => {
                     My Cart ({cart.length})
                   </NavLink>
                 </li>
-                
 
                 <li>
                   <NavLink to="/dashboard/paymentHistory">
@@ -139,7 +157,6 @@ const Dashboard = () => {
           <Outlet></Outlet>
         </div>
       </div>
-
     </div>
   );
 };
